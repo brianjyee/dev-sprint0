@@ -1,6 +1,6 @@
 # Polygon excercise from Week 0
 
-# Name:
+# Name: Brian Yee
 
 from math import pi
 from TurtleWorld import * 		
