@@ -23,7 +23,7 @@ def circle(t, r):
 def arc(t, r, theta):
     circumference = 2*pi*r
     length = circumference*abs(theta)/360
-    n = int(length/4)
+    n = int(length/2)
     l = length / n
     angle = float(theta) / n
     drawSides(t, n, l, angle)
