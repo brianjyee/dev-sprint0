@@ -12,28 +12,28 @@ bob = Turtle()
 # This is where you put code to move bob
 def polygon(t, l, n):
     angle = 360./n
-    for sides in range(n):
-        drawSide(t, l, angle)
+    drawSides(t, n, l, angle)
 
 def circle(t, r):
     circumference = 2*pi*r
-    n = r / 2
+    n = r
     l = circumference / n
     polygon(t, l, n)
 
 def arc(t, r, theta):
     circumference = 2*pi*r
-    n = r / 2
-    l = circumference / n
-    angle = 360. / n
-    for sides in range(int(theta/angle)):
-        drawSide(t, l, angle)
+    length = circumference*abs(theta)/360
+    n = int(length/4)
+    l = length / n
+    angle = float(theta) / n
+    drawSides(t, n, l, angle)
 
-def drawSide(t, l, angle):
-    fd(t, l)
-    rt(t, angle)
+def drawSides(t, n, l, angle):
+    for i in range(n):
+        fd(t, l)
+        rt(t, angle)
 
-#polygon(bob, 100, 10)
+#polygon(bob, 100, 5)
 #circle(bob, 100)
 #arc(bob, 100, 90)
 
